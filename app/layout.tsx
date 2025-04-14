@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react';
 export const metadata = {
   title: 'ScaleUp AI — AI-Driven Automation for Agencies',
   description: 'Streamline your agency with AI automation. Connect. Automate. Scale.',
@@ -11,7 +12,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <head />
-      <body>{children}</body>
+<body>
+  {children}
+  <Analytics />
+</body>
     </html>
   );
 }
