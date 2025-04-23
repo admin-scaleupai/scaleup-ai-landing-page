@@ -91,7 +91,7 @@ export default function Home() {
                 ))}
               </div>
               <p className="text-sm text-gray-600">
-                <span className="font-bold text-primary-500">500+</span> businesses already scaling with our AI
+                <span className="font-bold text-primary-500">300+</span> businesses already scaling with our AI
                 solutions
               </p>
             </div>
@@ -102,30 +102,6 @@ export default function Home() {
               src="/images/new-hero-image.png"
               alt="AI Automation Platform"
               className="w-full h-auto rounded-xl shadow-lg"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Logos Section */}
-      <section className="bg-gray-50 py-12">
-        <div className="container mx-auto px-4 md:px-6">
-          <p className="text-center text-gray-500 mb-8">Trusted by innovative companies worldwide</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16">
-            <img
-              src="/images/company-logo-1.png"
-              alt="Company 1"
-              className="h-12 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
-            />
-            <img
-              src="/images/company-logo-2.png"
-              alt="Company 2"
-              className="h-12 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
-            />
-            <img
-              src="/images/company-logo-3.png"
-              alt="Company 3"
-              className="h-12 w-auto grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all"
             />
           </div>
         </div>
@@ -388,13 +364,7 @@ export default function Home() {
             <p className="text-gray-400 text-sm">© 2023 ScaleUp AI. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path
-                    fillRule="evenodd"
-                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                    clipRule="evenodd"
-                  />
-                </svg>
+                <img src="/images/x-logo.png" alt="X (formerly Twitter)" className="h-5 w-5" />
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
