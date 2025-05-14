@@ -2,7 +2,6 @@ import Link from "next/link"
 import { ArrowRight, Bot, BarChart3, Zap, Users } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import TestimonialCard from "@/components/testimonial-card"
-import PricingCard from "@/components/pricing-card"
 import FeatureCard from "@/components/feature-card"
 
 export default function Home() {
@@ -11,11 +10,13 @@ export default function Home() {
       {/* Header */}
       <header className="container mx-auto py-4 px-4 md:px-6 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <img src="/images/scaleup-logo.png" alt="ScaleUp AI Logo" className="h-[135px]" />
+          <div className="h-[135px] flex items-center">
+            <span className="text-2xl font-bold text-primary-500">ScaleUp AI</span>
+          </div>
         </div>
         <nav className="hidden md:flex items-center gap-6">
-          <Link href="#pricing" className="text-gray-600 hover:text-primary-500 transition-colors">
-            Pricing
+          <Link href="#about" className="text-gray-600 hover:text-primary-500 transition-colors">
+            About
           </Link>
           <Link href="#testimonials" className="text-gray-600 hover:text-primary-500 transition-colors">
             Testimonials
@@ -51,58 +52,47 @@ export default function Home() {
 
       {/* Hero Section */}
       <section className="container mx-auto py-20 px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Scale Your Business with Intelligent AI Automation
-            </h1>
-            <p className="text-xl text-gray-600">
-              Streamline operations, boost productivity, and drive growth with our cutting-edge AI solutions tailored
-              for your business.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="https://calendly.com/wescaleupai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-6 text-lg inline-flex items-center"
-              >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <a
-                href="https://calendly.com/wescaleupai"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="border border-primary-500 text-primary-500 hover:bg-primary-50 rounded-md px-8 py-6 text-lg inline-flex items-center"
-              >
-                Book a Demo
-              </a>
-            </div>
-            <div className="flex items-center gap-4 pt-4">
-              <div className="flex -space-x-2">
-                {[1, 2, 3, 4].map((i) => (
-                  <div
-                    key={i}
-                    className="w-10 h-10 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium"
-                  >
-                    {i}
-                  </div>
-                ))}
-              </div>
-              <p className="text-sm text-gray-600">
-                <span className="font-bold text-primary-500">300+</span> businesses already scaling with our AI
-                solutions
-              </p>
-            </div>
+        <div className="max-w-3xl mx-auto text-center space-y-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+            Scale Your Business with Intelligent AI Automation
+          </h1>
+          <p className="text-xl text-gray-600">
+            Streamline operations, boost productivity, and drive growth with our cutting-edge AI solutions tailored for
+            your business.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="https://calendly.com/wescaleupai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
+            >
+              Get Started
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <a
+              href="https://calendly.com/wescaleupai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-primary-500 text-primary-500 hover:bg-primary-50 rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
+            >
+              Book a Demo
+            </a>
           </div>
-          <div className="relative">
-            <div className="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-primary-100 rounded-full blur-3xl opacity-70"></div>
-            <img
-              src="/images/new-hero-image.png"
-              alt="AI Automation Platform"
-              className="w-full h-auto rounded-xl shadow-lg"
-            />
+          <div className="flex items-center gap-4 pt-4 justify-center">
+            <div className="flex -space-x-2">
+              {[1, 2, 3, 4].map((i) => (
+                <div
+                  key={i}
+                  className="w-10 h-10 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs font-medium"
+                >
+                  {i}
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-gray-600">
+              <span className="font-bold text-primary-500">300+</span> businesses already scaling with our AI solutions
+            </p>
           </div>
         </div>
       </section>
@@ -152,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-gray-50 py-20">
+      <section id="about" className="bg-gray-50 py-20">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">How ScaleUp AI Works</h2>
@@ -219,66 +209,6 @@ export default function Home() {
             title="Director of Operations, GrowthForce"
             avatar="/placeholder.svg?height=100&width=100"
           />
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section id="pricing" className="bg-gray-50 py-20">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-xl text-gray-600">
-              Choose the plan that fits your business needs and scale as you grow.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <PricingCard
-              title="Starter"
-              price="$499"
-              description="Perfect for small businesses just getting started with AI automation."
-              features={[
-                "Basic AI automation tools",
-                "5 automated workflows",
-                "Basic analytics dashboard",
-                "Email support",
-              ]}
-              buttonText="Get Started"
-              buttonVariant="outline"
-              buttonLink="https://calendly.com/wescaleupai"
-            />
-            <PricingCard
-              title="Professional"
-              price="$999"
-              description="Ideal for growing businesses looking to scale their operations."
-              features={[
-                "Advanced AI automation tools",
-                "Unlimited workflows",
-                "Advanced analytics & reporting",
-                "Priority support",
-                "API access",
-              ]}
-              buttonText="Get Started"
-              buttonVariant="default"
-              highlighted={true}
-              buttonLink="https://calendly.com/wescaleupai"
-            />
-            <PricingCard
-              title="Enterprise"
-              price="Custom"
-              description="Tailored solutions for large organizations with complex needs."
-              features={[
-                "Custom AI solution development",
-                "Dedicated account manager",
-                "24/7 premium support",
-                "Custom integrations",
-                "On-premise deployment options",
-              ]}
-              buttonText="Contact Sales"
-              buttonVariant="outline"
-              buttonLink="https://calendly.com/wescaleupai"
-            />
-          </div>
         </div>
       </section>
 
@@ -364,7 +294,13 @@ export default function Home() {
             <p className="text-gray-400 text-sm">© 2023 ScaleUp AI. All rights reserved.</p>
             <div className="flex gap-4 mt-4 md:mt-0">
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
-                <img src="/images/x-logo.png" alt="X (formerly Twitter)" className="h-5 w-5" />
+                <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path
+                    fillRule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clipRule="evenodd"
+                  />
+                </svg>
               </Link>
               <Link href="#" className="text-gray-400 hover:text-white transition-colors">
                 <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
