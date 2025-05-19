@@ -22,7 +22,7 @@ export default function Home() {
             Testimonials
           </Link>
           <a
-            href="https://calendly.com/wescaleupai"
+            href="https://calendly.com/wescaleupai/15min"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-4 py-2 inline-flex items-center"
@@ -62,7 +62,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://calendly.com/wescaleupai"
+              href="https://calendly.com/wescaleupai/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-primary-500 hover:bg-primary-600 text-white rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
@@ -71,7 +71,7 @@ export default function Home() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
-              href="https://calendly.com/wescaleupai"
+              href="https://calendly.com/wescaleupai/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-primary-500 text-primary-500 hover:bg-primary-50 rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
@@ -221,7 +221,7 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://calendly.com/wescaleupai"
+              href="https://calendly.com/wescaleupai/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary-500 hover:bg-gray-100 rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
@@ -230,7 +230,7 @@ export default function Home() {
               <ArrowRight className="ml-2 h-5 w-5" />
             </a>
             <a
-              href="https://calendly.com/wescaleupai"
+              href="https://calendly.com/wescaleupai/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-white text-primary-500 hover:bg-gray-100 rounded-md px-8 py-6 text-lg inline-flex items-center justify-center"
